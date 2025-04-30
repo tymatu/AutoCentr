@@ -14,10 +14,10 @@ nahrádně:
 + Newtonsoft.json (13.0.3)
 
 ### DataBase 
-- JsonDataReader.cs - načítání json souborů
-- Opravy.json
-- Users.json
-- Zakazniky.json
+- JsonDataReader.cs - třída pro načítání a deserializaci dat z JSON souborů
+- Opravy.json - data o opravách
+- Users.json - data uživatelů (přihlašovací údaje)
+- Zakazniky.json - data zákazníků
 
 ### Model
 - Oprava.cs - model opravy
@@ -27,14 +27,14 @@ nahrádně:
 - Zakaznik.cs - model zakaznika
 
 ### ModelView
-- ButtonClick.cs
-- LoginVM.cs 
-- MainWindowVM.cs  
-- OpravaVM.cs 
-- PracovnikyVM.cs  
-- ProfileVM.cs 
-- ViewModelBase.cs  
-- ZakaznikyVM.cs 
+- ButtonClick.cs - pomocná třída pro zpracování příkazů tlačítek
+- LoginVM.cs -  logika přihlášení uživatele (ověření, autentizace)
+- MainWindowVM.cs - logika hlavního okna, přepínání mezi stránkami
+- OpravaVM.cs - správa dat o opravách
+- PracovnikyVM.cs -  zobrazení a správa seznamu pracovníků
+- ProfileVM.cs - logika uživatelského profilu
+- ViewModelBase.cs - základní třída s implementací INotifyPropertyChanged
+- ZakaznikyVM.cs - zobrazení a správa zákazníků
 
 ### Util
 - BoolVisibility.cs - převádí bool hodnotu na System.Windows.Visibility pomoci IValueConventer
