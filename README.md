@@ -47,9 +47,7 @@ nahrádně:
 - OpravyView.xaml
   - OpravyView.xaml.cs
 -PracovnikyView.xaml
-  -PracovnikyView.xaml.cs
-- ProfileView.xaml
-  - ProfileView.xaml.cs
+  - PracovnikyView.xaml.cs
 - ZakaznikyView.xaml
   - ZakaznikyView.xaml.cs
 
