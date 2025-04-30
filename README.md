@@ -46,7 +46,7 @@ nahrádně:
   - Menu.xaml.cs
 - OpravyView.xaml
   - OpravyView.xaml.cs
--PracovnikyView.xaml
+- PracovnikyView.xaml
   - PracovnikyView.xaml.cs
 - ZakaznikyView.xaml
   - ZakaznikyView.xaml.cs
