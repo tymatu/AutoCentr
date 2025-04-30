@@ -40,18 +40,18 @@ nahrádně:
 - BoolVisibility.cs - převádí bool hodnotu na System.Windows.Visibility pomoci IValueConventer
 
 ### View
--LoginView.xaml
-  -LoginView.xaml.cs
--Menu.xaml
-  -Menu.xaml.cs
--OpravyView.xaml
-  OpravyView.xaml.cs
+- LoginView.xaml
+  - LoginView.xaml.cs
+- Menu.xaml
+  - Menu.xaml.cs
+- OpravyView.xaml
+  - OpravyView.xaml.cs
 -PracovnikyView.xaml
   -PracovnikyView.xaml.cs
--ProfileView.xaml
-  -ProfileView.xaml.cs
--ZakaznikyView.xaml
-  -ZakaznikyView.xaml.cs
+- ProfileView.xaml
+  - ProfileView.xaml.cs
+- ZakaznikyView.xaml
+  - ZakaznikyView.xaml.cs
 
 
 ## Zbyvající třidy 
