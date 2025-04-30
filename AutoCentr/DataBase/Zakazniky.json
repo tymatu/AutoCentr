@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1",
+    "Jmeno": "Lucieee",
+    "Prijmeni": "Kovarova",
+    "auto": "Mercedes Sprinter",
+    "datum_prijeti": "2024-04-13T00:00:00",
+    "Detaily": null,
+    "Informace": "abcde",
+    "id_pracovnik": "1"
+  },
+  {
+    "Id": "2",
+    "Jmeno": "David",
+    "Prijmeni": "Novotny",
+    "auto": "Volksvagen Golf",
+    "datum_prijeti": "2024-04-14T00:00:00",
+    "Detaily": null,
+    "Informace": "test",
+    "id_pracovnik": "2"
+  },
+  {
+    "Id": "3",
+    "Jmeno": "Aleš",
+    "Prijmeni": "Novotný",
+    "auto": "Škoda Fabia",
+    "datum_prijeti": "2024-04-15T00:00:00",
+    "Detaily": null,
+    "Informace": "Pacientka upadla na schodech a poranila si nohu.",
+    "id_pracovnik": "3"
+  },
+  {
+    "Id": "4",
+    "Jmeno": "Lukáš",
+    "Prijmeni": "Gleich",
+    "auto": "Škoda Octavia",
+    "datum_prijeti": "2024-04-18T16:09:09.7307353+02:00",
+    "Detaily": null,
+    "Informace": "No info",
+    "id_pracovnik": "4"
+  }
+]

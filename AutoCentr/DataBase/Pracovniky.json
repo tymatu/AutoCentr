@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1",
+    "Jmeno": "Jan",
+    "Prijmeni": "Novak",
+    "Telefon": "+123456789",
+    "pobocka": 0,
+    "id_user": "1"
+  },
+  {
+    "Id": "2",
+    "Jmeno": "Jakub",
+    "Prijmeni": "Kratky",
+    "Telefon": "+987654321",
+    "pobocka": 1,
+    "id_user": "2"
+  },
+  {
+    "Id": "3",
+    "Jmeno": "Petr",
+    "Prijmeni": "Kral",
+    "Telefon": "+111222333",
+    "pobocka": 2,
+    "id_user": "3"
+  },
+  {
+    "Id": "4",
+    "Jmeno": "Tomáš",
+    "Prijmeni": "Černý",
+    "Telefon": "+13123123",
+    "pobocka": 4,
+    "id_user": "4"
+  }
+]

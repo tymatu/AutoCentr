@@ -1,0 +1,122 @@
+﻿<Window x:Class="AutoCentr.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:util="clr-namespace:AutoCentr.Util"
+
+
+        xmlns:local="clr-namespace:AutoCentr"
+       
+        
+        mc:Ignorable="d"
+        Title="Auto Centr" Height="570" Width="825"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <util:BoolVisibility x:Key="RoleToVis"/>
+        <Style x:Key="NavigationButtonStyle" TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+            <!-- Граница только снизу -->
+            <Setter Property="BorderBrush" Value="White"/>
+            <!-- Цвет границы -->
+            <Setter Property="Margin" Value="0"/>
+            <!-- Убрать отступы -->
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <!-- Триггеры для изменения внешнего вида при наведении -->
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="Foreground" Value="Gray"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <DockPanel>
+
+        <StackPanel DockPanel.Dock="Left" Width="129" Visibility="{Binding UnAuth, Converter={StaticResource RoleToVis}}"
+                    Background="#008000">
+            <TextBlock Text="MENU" Margin="30,15,0,0"
+                       Foreground="White"
+                       FontWeight="Normal"
+                       FontFamily="Montserrat" 
+                       FontSize="15"
+                       />
+            <!-- PACIENTY -->
+
+            <Button Style="{StaticResource NavigationButtonStyle}" Command="{Binding InfoCommand}" Width="125" Margin="0,30,0,0">
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock Text="INFO" Foreground="White" Margin="10,0,60,0"
+                               FontWeight="Bold"
+                               FontFamily="Montserrat"
+                               TextAlignment="Left"
+                               Padding="0,3,0,0"
+                               FontSize="20"/>
+                </StackPanel>
+            </Button>
+            <Button Style="{StaticResource NavigationButtonStyle}" Command="{Binding ZakaznikyCommand}" Width="142">
+                <StackPanel Orientation="Horizontal" Margin="5">
+
+                    <TextBlock Text="ZAKAZNIKY" Foreground="White" Margin="10,0,35,0"
+                               FontWeight="Bold"
+                               FontFamily="Montserrat" 
+                               TextAlignment="Left"
+                               Padding="0,3,0,0"
+                               FontSize="20"/>
+                </StackPanel>
+            </Button>
+            <Button Style="{StaticResource NavigationButtonStyle}" Command="{Binding OpravyCommand}" Width="125">
+                <StackPanel Orientation="Horizontal" Margin="5">
+
+                    <TextBlock Text="OPRAVY" Foreground="White" Margin="10,0,25,0"
+                               FontWeight="Bold"
+                               FontFamily="Montserrat" 
+                               TextAlignment="Left"
+                               Padding="0,3,0,0"
+                               FontSize="20"/>
+                </StackPanel>
+            </Button>
+            <Button Style="{StaticResource NavigationButtonStyle}" Command="{Binding PracovnikyCommand}" Width="125">
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock Text="PRACOVNIKY" Foreground="White"
+                               FontWeight="Bold"
+                               FontFamily="Montserrat" 
+                               TextAlignment="Left"
+                               Padding="0,3,0,0"
+                               FontSize="20" Width="129"/>
+                </StackPanel>
+            </Button>
+            <Button Style="{StaticResource NavigationButtonStyle}" Command="{Binding ProfileCommand}" Width="125">
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock Text="PROFILE" Foreground="White" Margin="10,0,35,0"
+                               FontWeight="Bold"
+                               FontFamily="Montserrat" 
+                               TextAlignment="Left"
+                               Padding="0,3,0,0"
+                               FontSize="20"/>
+                </StackPanel>
+            </Button>
+            <Button Style="{StaticResource NavigationButtonStyle}" Command="{Binding OdhlasitCommand}" Width="125">
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock Text="ODHLASIT" Foreground="White" Margin="10,0,35,0"
+                               FontWeight="Bold"
+                               FontFamily="Montserrat" 
+                               TextAlignment="Left"
+                               Padding="0,3,0,0"
+                               FontSize="20"/>
+                </StackPanel>
+            </Button>
+
+
+
+        </StackPanel>
+        <Border Background="#D5D5D5">
+            <ContentControl x:Name="Pages" Content="{Binding CurrentView}"/>
+            
+        </Border>
+
+    </DockPanel>
+</Window>

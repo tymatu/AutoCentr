@@ -1,0 +1,174 @@
+﻿<UserControl x:Class="AutoCentr.View.ProfileView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:AutoCentr.View"
+             mc:Ignorable="d"
+             d:DesignHeight="570" d:DesignWidth="700">
+
+    <DockPanel>
+
+        <Image  DockPanel.Dock="Right"
+                       Height="550"
+                       Width="425"
+                       Source="/Resources/Image.jpg" Stretch="UniformToFill"
+            >
+        </Image>
+        <StackPanel Orientation="Vertical" Width="275" DockPanel.Dock="Left" Background="#008000" HorizontalAlignment="Left">
+            <StackPanel Orientation="Horizontal" Width="300" Margin="0,0,0,0">
+                <TextBlock Text="Jmeno:" Margin="10,15,0,0"
+                               Width="65"
+                               HorizontalAlignment="Left"
+                               Foreground="White"
+                               FontWeight="Bold"
+                               FontFamily="Montserrat" 
+                               FontSize="15"/>
+                <TextBox
+                        Text="{Binding SelectedPrac.Jmeno,UpdateSourceTrigger=PropertyChanged}"
+                        Margin="10,13,0,0"
+                        Width="170"
+                        Height="25"
+                        HorizontalAlignment="Left" >
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Width="300">
+                <TextBlock Text="Prijmeni:" Margin="10,20,0,0"
+                               Width="65"
+                               HorizontalAlignment="Left"
+                               Foreground="White"
+                               FontWeight="Bold"
+                               FontFamily="Montserrat" 
+                               FontSize="15"/>
+                <TextBox
+                        Margin="10,17,0,0"
+                        Text="{Binding SelectedPrac.Prijmeni,UpdateSourceTrigger=PropertyChanged}"
+                        Width="170"
+                        Height="25"
+                        HorizontalAlignment="Left" >
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Width="300" Margin="0,0,0,0">
+                <TextBlock Text="Telefon:" Margin="10,20,0,0"
+                               Width="65"
+                               HorizontalAlignment="Left"
+                               Foreground="White"
+                               FontWeight="Bold"
+                               FontFamily="Montserrat" 
+                               FontSize="15"/>
+                <TextBox
+                        Text="{Binding SelectedPrac.Telefon,UpdateSourceTrigger=PropertyChanged}"
+                        Margin="10,17,0,0"
+                        Width="170"
+                        Height="25"
+                        HorizontalAlignment="Left" >
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Width="300" Margin="0,0,0,0">
+                <TextBlock Text="Oddeleni:" Margin="10,20,0,0"
+                               Width="65"
+                               HorizontalAlignment="Left"
+                               Foreground="White"
+                               FontWeight="Bold"
+                               FontFamily="Montserrat" 
+                               FontSize="15"/>
+                <ComboBox
+                        Margin="10,17,0,0"
+                        Width="170"
+                        Height="25"
+                        ItemsSource="{Binding Pobocky}" SelectedItem="{Binding SelectedPobocky}" SelectedIndex="0"
+                        HorizontalAlignment="Left" >
+                </ComboBox>
+            </StackPanel>
+            <TextBlock Text="Username:" Margin="10,10,0,0"
+                           Width="120"
+                           HorizontalAlignment="Left"
+                           Foreground="White"
+                           FontWeight="Bold"
+                           FontFamily="Montserrat" 
+                           FontSize="15"/>
+            <TextBox
+                    Margin="10,10,0,0"
+                    Text="{Binding Username,UpdateSourceTrigger=PropertyChanged}"
+                    Width="245"
+                    Height="25"
+                    HorizontalAlignment="Left" >
+            </TextBox>
+            <TextBlock Text="Password:" Margin="10,10,0,0"
+                           Width="120"
+                           HorizontalAlignment="Left"
+                           Foreground="White"
+                           FontWeight="Bold"
+                           FontFamily="Montserrat" 
+                           FontSize="15"/>
+            <TextBox
+                    Margin="10,10,0,0"
+                    Text="{Binding Password,UpdateSourceTrigger=PropertyChanged}"
+                    Width="245"
+                    Height="25"
+                    HorizontalAlignment="Left" >
+            </TextBox>
+            <TextBlock Text="Klienti:" Margin="10,10,0,0"
+                           Width="65"
+                           HorizontalAlignment="Left"
+                           Foreground="White"
+                           FontWeight="Bold"
+                           FontFamily="Montserrat" 
+                           FontSize="15"/>
+            <ListView
+                   Width="245"
+                   HorizontalAlignment="Left"
+                   Height="150"
+                   Margin="10,10,0,0"
+                   ItemsSource="{Binding Zakazniky}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Jméno" DisplayMemberBinding="{Binding Jmeno}" Width="80"/>
+                        <GridViewColumn Header="Prijmeni" DisplayMemberBinding="{Binding Prijmeni}" Width="80"/>
+                        <GridViewColumn Header="Auto" DisplayMemberBinding="{Binding Auto}" Width="80"/>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+
+
+
+            <Button Content="SAVE DATA" Command="{Binding SaveCommand}" HorizontalAlignment="Left" 
+                        BorderThickness="0"
+                        Foreground="White"
+                        FontSize="12"
+                        FontFamily="Montserrat"
+                        Cursor="Hand"                           
+                        Margin="10,10,0,0">
+
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#90D8CF"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#2D5FED"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="240" Height="36"
+                                    CornerRadius="15,15,15,15"
+                                    Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+        </StackPanel>
+
+    </DockPanel>
+</UserControl>
