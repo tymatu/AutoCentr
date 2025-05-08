@@ -4,7 +4,13 @@
 
 **AutoCentr** je WPF desktopová aplikace navržená pro správu zákazníků autoservisu. Umožňuje přidávat nové zákazníky, přiřazovat k nim pracovníky, evidovat informace o vozidlech, zakazníků. Aplikace je postavena na architektuře **MVVM (Model-View-ViewModel)** s využitím datových vazeb (Data Binding) a příkazů (ICommand). RelayCommand pro implementaci příkazů a ObservableCollection pro seznamy zákazníků a pracovníků. Data se načítají a deserializujou z JSON souborů.
 
-
+## Přihlasovací udajé 
+Admin: 
+  -login: admin
+  -password: admin
+Běžný pracovník:
+  -login: Mike
+  -password: 1234   
 ---
 ### Architektura Auto Centra
 
