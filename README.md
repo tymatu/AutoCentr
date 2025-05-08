@@ -7,10 +7,10 @@
 ## Přihlasovací udajé 
 - Admin: 
    login: admin
-   password: admin
+   - password: admin
 - Běžný pracovník:
    login: Mike
-   password: 1234   
+   - password: 1234   
 ---
 ### Architektura Auto Centra
 
