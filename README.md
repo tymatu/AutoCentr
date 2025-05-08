@@ -6,11 +6,11 @@
 
 ## Přihlasovací udajé 
 -Admin: 
-  -login: admin
-  -password: admin
+   login: admin
+   password: admin
 -Běžný pracovník:
-  -login: Mike
-  -password: 1234   
+   login: Mike
+   password: 1234   
 ---
 ### Architektura Auto Centra
 
